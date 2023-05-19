@@ -8,6 +8,12 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from "../TodoForm";
 
+const defaulTodos = [
+  { text: 'Cortar cebolla', completed: false },
+  { text: 'Lalalala', completed: true },
+  { text: 'Cantar una cancion', completed: false },
+];
+
 function AppUI () {
   const { 
     error, 
