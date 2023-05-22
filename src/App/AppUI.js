@@ -8,11 +8,18 @@ import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from "../TodoForm";
 
-const defaulTodos = [
+/*const defaulTodos = [
   { text: 'Cortar cebolla', completed: false },
   { text: 'Lalalala', completed: true },
   { text: 'Cantar una cancion', completed: false },
+  { text: 'Cantar un poema', completed: true },
+  { text: 'Curso de React', completed: false },
 ];
+localStorage.setItem('TODOS_V1', defaulTodos);
+localStorage.removeItem('TODOS_V1');
+*/
+
+
 
 function AppUI () {
   const { 
