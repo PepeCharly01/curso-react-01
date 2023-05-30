@@ -7,6 +7,9 @@ import { TodoItem } from '../TodoItem';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { Modal } from '../Modal';
 import { TodoForm } from "../TodoForm";
+import { TodosLoading } from '../TodosLoading';
+import { TodosError } from '../TodosError';
+import { EmptyTodos } from '../EmptyTodos';
 
 /*const defaulTodos = [
   { text: 'Cortar cebolla', completed: false },
@@ -37,9 +40,15 @@ function AppUI () {
           <TodoCounter />
           <TodoSearch />
           <TodoList>
-            {error && <p>Tranquilo, hubo un error...</p>}
-            {loading && <p>Estamos cargando, no desesperes...</p>}
-            {(!loading && !searchedTodos.length) && <p>!Crea tu primer Todo!</p>}
+            {loading && (
+            <>
+            <TodosLoading />
+            <TodosLoading />
+            <TodosLoading />
+            </>
+            )}
+            {error && <TodosError />}
+            {(!loading && !searchedTodos.length) && <EmptyTodos />}
 
             {searchedTodos.map(todo => (
              <TodoItem 
